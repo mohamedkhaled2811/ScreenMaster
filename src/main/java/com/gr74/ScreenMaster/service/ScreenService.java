@@ -27,9 +27,7 @@ public class ScreenService {
         screenRepository.save(screen);
     }
 
-    public void addScreen(Screen screen){
-        screenRepository.save(screen);
-    }
+
 
     public void deleteScreen(Integer screenId){
         screenRepository.deleteById(screenId);
@@ -48,4 +46,5 @@ public class ScreenService {
                 .theater(theater)
                 .build();
     }
+
 }
