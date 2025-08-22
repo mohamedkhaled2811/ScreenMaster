@@ -1,8 +1,8 @@
 package com.gr74.ScreenMaster.service;
 
 
-import com.gr74.ScreenMaster.dto.SeatTypeRequestDto;
-import com.gr74.ScreenMaster.dto.SeatTypeResponseDto;
+import com.gr74.ScreenMaster.dto.response.SeatTypeRequestDto;
+import com.gr74.ScreenMaster.dto.response.SeatTypeResponseDto;
 import com.gr74.ScreenMaster.model.SeatType;
 import com.gr74.ScreenMaster.repository.SeatTypeRepository;
 import lombok.RequiredArgsConstructor;

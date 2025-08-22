@@ -1,4 +1,4 @@
-package com.gr74.ScreenMaster.dto;
+package com.gr74.ScreenMaster.dto.response;
 
 
 import jakarta.validation.constraints.NotEmpty;

@@ -1,14 +1,10 @@
 package com.gr74.ScreenMaster.controller;
 
-import com.gr74.ScreenMaster.dto.ScreenRequestDto;
-import com.gr74.ScreenMaster.dto.SeatRequestDto;
-import com.gr74.ScreenMaster.dto.SeatTypeRequestDto;
-import com.gr74.ScreenMaster.dto.SeatTypeResponseDto;
-import com.gr74.ScreenMaster.dto.TheaterRequestDto;
-import com.gr74.ScreenMaster.model.Screen;
-import com.gr74.ScreenMaster.model.Seat;
-import com.gr74.ScreenMaster.model.SeatType;
-import com.gr74.ScreenMaster.model.Theater;
+import com.gr74.ScreenMaster.dto.request.ScreenRequestDto;
+import com.gr74.ScreenMaster.dto.request.SeatRequestDto;
+import com.gr74.ScreenMaster.dto.response.SeatTypeRequestDto;
+import com.gr74.ScreenMaster.dto.response.SeatTypeResponseDto;
+import com.gr74.ScreenMaster.dto.request.TheaterRequestDto;
 import com.gr74.ScreenMaster.service.ScreenService;
 import com.gr74.ScreenMaster.service.SeatService;
 import com.gr74.ScreenMaster.service.SeatTypeService;
@@ -16,7 +12,6 @@ import com.gr74.ScreenMaster.service.TheaterService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

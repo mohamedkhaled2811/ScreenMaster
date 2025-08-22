@@ -1,7 +1,7 @@
 package com.gr74.ScreenMaster.service;
 
 
-import com.gr74.ScreenMaster.dto.ScreenRequestDto;
+import com.gr74.ScreenMaster.dto.request.ScreenRequestDto;
 import com.gr74.ScreenMaster.model.Screen;
 import com.gr74.ScreenMaster.model.Theater;
 import com.gr74.ScreenMaster.repository.ScreenRepository;

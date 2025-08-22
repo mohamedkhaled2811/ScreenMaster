@@ -1,11 +1,11 @@
 package com.gr74.ScreenMaster.controller;
 
 
-import com.gr74.ScreenMaster.dto.AuthenticationRequestDto;
-import com.gr74.ScreenMaster.dto.AuthenticationResponseDto;
-import com.gr74.ScreenMaster.dto.RegistrationRequestDto;
-import com.gr74.ScreenMaster.dto.ResendRequestDto;
-import com.gr74.ScreenMaster.dto.VerificationRequestDto;
+import com.gr74.ScreenMaster.dto.request.AuthenticationRequestDto;
+import com.gr74.ScreenMaster.dto.response.AuthenticationResponseDto;
+import com.gr74.ScreenMaster.dto.request.RegistrationRequestDto;
+import com.gr74.ScreenMaster.dto.request.ResendRequestDto;
+import com.gr74.ScreenMaster.dto.request.VerificationRequestDto;
 import com.gr74.ScreenMaster.service.AuthenticationService;
 import com.gr74.ScreenMaster.service.UserDetailsServiceImpl;
 import com.gr74.ScreenMaster.service.VerificationService;

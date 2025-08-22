@@ -1,7 +1,7 @@
 package com.gr74.ScreenMaster.service;
 
 
-import com.gr74.ScreenMaster.dto.SeatRequestDto;
+import com.gr74.ScreenMaster.dto.request.SeatRequestDto;
 import com.gr74.ScreenMaster.model.Screen;
 import com.gr74.ScreenMaster.model.Seat;
 import com.gr74.ScreenMaster.model.SeatType;

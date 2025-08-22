@@ -1,4 +1,4 @@
-package com.gr74.ScreenMaster.dto;
+package com.gr74.ScreenMaster.dto.request;
 
 import com.gr74.ScreenMaster.enums.ScreenType;
 import jakarta.validation.constraints.NotEmpty;

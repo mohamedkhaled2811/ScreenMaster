@@ -1,7 +1,6 @@
-package com.gr74.ScreenMaster.dto;
+package com.gr74.ScreenMaster.dto.response;
 
 
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

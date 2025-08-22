@@ -1,7 +1,7 @@
 package com.gr74.ScreenMaster.service;
 
 
-import com.gr74.ScreenMaster.dto.TheaterRequestDto;
+import com.gr74.ScreenMaster.dto.request.TheaterRequestDto;
 import com.gr74.ScreenMaster.model.Theater;
 import com.gr74.ScreenMaster.repository.TheaterRepository;
 import lombok.RequiredArgsConstructor;

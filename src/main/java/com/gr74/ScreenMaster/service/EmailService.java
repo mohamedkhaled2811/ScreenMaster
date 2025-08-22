@@ -30,7 +30,7 @@ public class EmailService {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-        helper.setFrom("screenmaster.app@example.com");
+        helper.setFrom("smtp-relay.brevo.com");
         helper.setTo(to);
         helper.setSubject("Verify Your Email Address - " + verificationCode);
         helper.setText(htmlContent, true); // true = HTML content
