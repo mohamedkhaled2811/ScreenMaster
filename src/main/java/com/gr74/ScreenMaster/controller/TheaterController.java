@@ -50,6 +50,7 @@ public class TheaterController {
         return seatService.getScreenSeats(screenId);
     }
 
+
     @PostMapping("add-screen-seat")
     public void addScreenSeat(@RequestBody @Valid SeatRequestDto seatRequestDto){
             seatService.addScreenSeat(seatRequestDto);

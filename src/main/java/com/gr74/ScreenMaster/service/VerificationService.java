@@ -1,6 +1,7 @@
 package com.gr74.ScreenMaster.service;
 
 
+import com.gr74.ScreenMaster.dto.response.VerificationEmailDto;
 import com.gr74.ScreenMaster.enums.CodeType;
 import com.gr74.ScreenMaster.model.VerificationCode;
 import com.gr74.ScreenMaster.repository.VerificationCodeRepository;
@@ -30,7 +31,9 @@ public class VerificationService {
 
     private final VerificationCodeGeneratorService verificationCodeGeneratorService; 
 
-    private final UserDetailsServiceImpl userDetailsService; 
+    private final UserDetailsServiceImpl userDetailsService;
+
+    private final RabbitMQProducerService rabbitMQProducerService;
 
     @Value("${application.mailing.frontend.activation-url}")
     private String url;
@@ -52,13 +55,12 @@ public class VerificationService {
                     .code(code)
                     .expiresAt(futureTime)
                     .type(CodeType.EMAIL_VERIFICATION)
-
                     .build();
             verificationRepository.save(verificationCode);
 
             // Send email
             String verificationUrl = buildVerificationUrl(email, code);
-            emailService.sendVerificationEmail(email, code, verificationUrl);
+            rabbitMQProducerService.sendVerificationMessage(VerificationEmailDto.builder().to(email).code(code).verificationUrl(verificationUrl).build());
 
             return code; // Only return for testing, remove in production
 

@@ -29,7 +29,6 @@ public class TMDBScheduledTasks {
 
 
     @Scheduled(cron = "00 50 00 * * ?")
-//    @Scheduled(fixedRate = 14400000) // 4 hours in milliseconds
     public void scheduledMoviesSync() {
         log.info("Starting scheduled popular movies sync...");
         try {

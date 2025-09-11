@@ -34,6 +34,7 @@ ScreenMaster is a Spring Boot backend for managing theaters, screens, seats, mov
 - **HTTP Client**: Spring `WebClient`
 - **Scheduling**: Spring Scheduling
 - **Email**: SMTP with templated HTML emails (Thymeleaf)
+- **Message Queue**: RabbitMQ for asynchronous notifications
 - **External Services**:
   - **TMDB**: movie metadata, genres
   - **PayPal**: payments.
@@ -100,6 +101,7 @@ The schema uses PostgreSQL-specific features including check constraints for sta
 ### Email Notifications
 - **Flows**: registration verification, resend code.
 - **Templates**: HTML templates under `src/main/resources/templates/email/`.
+- **Message Queue**: RabbitMQ for asynchronous email processing and notifications.
 - Configure SMTP via environment variables (see Configuration).
 
 ---
@@ -131,6 +133,11 @@ Set properties via environment variables or `src/main/resources/application.prop
   - `SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH=true`
   - `SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE=true`
   - `APP_MAIL_FROM=noreply@screenmaster.app`
+- **RabbitMQ**
+  - `SPRING_RABBITMQ_HOST=localhost`
+  - `SPRING_RABBITMQ_PORT=5672`
+  - `SPRING_RABBITMQ_USERNAME=guest`
+  - `SPRING_RABBITMQ_PASSWORD=guest`
 
 
 ---
@@ -194,7 +201,6 @@ src/main/resources
 
 ### Upcoming Features
 
-- Supporting Messaging queues for sending notifications.
 - Adding Stripe as a payment service.
 - Adding a Docker version of Screen Master.
 

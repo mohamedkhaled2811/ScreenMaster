@@ -1,9 +1,8 @@
 package com.gr74.ScreenMaster.controller;
 
 
+import com.gr74.ScreenMaster.enums.PaymentStatus;
 import com.gr74.ScreenMaster.model.Booking;
-import com.gr74.ScreenMaster.model.PaymentTransaction;
-import com.gr74.ScreenMaster.model.Showtime;
 import com.gr74.ScreenMaster.repository.BookingRepository;
 import com.gr74.ScreenMaster.service.PaymentService;
 import com.gr74.ScreenMaster.service.PaypalService;
@@ -18,7 +17,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
-import java.util.Optional;
 
 
 @RestController
@@ -79,6 +77,7 @@ public class PaypalController {
         try {
             Payment payment = paypalService.executePayment(paymentId,payerId);
             if(payment.getState().equals("approved")){
+                paymentService.updatePaymentStatus(paymentId, PaymentStatus.APPROVED);
                 return "paymentSuccess";
             }
         }
