@@ -10,7 +10,7 @@ ScreenMaster is a Spring Boot backend for managing theaters, screens, seats, mov
 ---
 ### System Architecture Diagram
 
-![System Architecture](docs/images/screen%20master_arc.svg)
+![System Architecture](docs/images/screen%20master_arc.svg?raw=true&v=2)
 
 
 ---
